@@ -1,3 +1,9 @@
 ﻿* Birincil Anahtar ne işe yarar?
 - Benzersiz alan oluşturmak için kullanılır.
-* 
+* .NET Framework nedir?
+- Framework (Çerçeve, çalışma alanı demek). Yani .Net Framework Windows tabanlı uygulamalar geliştirmeme olanak sağlayan
+bir çerçevedir.
+Asp .Net windows tabanında geliştirebileceğimiz ve yine windows sunucu üzerinden diplo edebileceğimiz (yani canlıya alabileceğimiz)
+proje geliştirmemize olanak sağlar. .Net Framework Windowsa bağımlıydı.(Sadece windosw tabanlı geliştirme sağlar)
+.NET Core bütün işletim sistemlerine geçiş yaparak hepsinde geliştirme sağlar.
+
