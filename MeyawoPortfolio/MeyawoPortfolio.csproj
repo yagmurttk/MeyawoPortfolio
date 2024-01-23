@@ -121,6 +121,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\AdminLayoutController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\EducationController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -288,6 +289,10 @@
     <Content Include="Views\Project\Index.cshtml" />
     <Content Include="Views\About\Index.cshtml" />
     <Content Include="Views\Project\CreateProject.cshtml" />
+    <Content Include="Views\AdminLayout\_Layout.cshtml" />
+    <Content Include="Views\AdminLayout\_HeaderPartial.cshtml" />
+    <Content Include="Views\AdminLayout\_SidebarPartial.cshtml" />
+    <Content Include="Views\AdminLayout\_ScriptPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
