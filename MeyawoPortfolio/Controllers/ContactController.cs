@@ -7,17 +7,13 @@ using MeyawoPortfolio.Models;
 
 namespace MeyawoPortfolio.Controllers
 {
-    public class ProjectController : Controller
+    public class ContactController : Controller
     {
         DbMyPortfolioEntities db = new DbMyPortfolioEntities();
         public ActionResult Index()
         {
-            var values = db.Tbl_Project.ToList();
+            var values = db.Tbl_Contact.ToList();
             return View(values);
-        }
-        public ActionResult CreateProject()
-        {
-            return View();
         }
     }
 }
