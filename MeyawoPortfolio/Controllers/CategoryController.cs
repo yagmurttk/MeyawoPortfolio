@@ -3,20 +3,52 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MeyawoPortfolio.Models;
 
 namespace MeyawoPortfolio.Controllers
 {
     public class CategoryController : Controller
     {
-        // GET: Category
+        DbMyPortfolioEntities db = new DbMyPortfolioEntities();
         public ActionResult Index()
         {
-            return View();
+            var ktgr = db.Tbl_Category.ToList();
+            return View(ktgr);
         }
-        public ActionResult Index2()
+        [HttpGet]
+        public ActionResult AddCategory()
         {
             return View();
         }
-        
+        [HttpPost]
+        public ActionResult AddCategory(Tbl_Category ktgr)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View("YeniKategori");
+            }
+            db.Tbl_Category.Add(ktgr);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        public ActionResult DeleteCategory(int id)
+        {
+            var ktgr = db.Tbl_Category.Find(id);
+            db.Tbl_Category.Remove(ktgr);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        public ActionResult BringCategory(int id)
+        {
+            var ktgr = db.Tbl_Category.Find(id);
+            return View("BringCategory", ktgr);
+        }
+        public ActionResult UpdateCategory(Tbl_Category p)
+        {
+            var ktgr = db.Tbl_Category.Find(p.CategoryID);
+            ktgr.CategoryName = p.CategoryName;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

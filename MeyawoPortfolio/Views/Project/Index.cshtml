@@ -5,7 +5,7 @@
 }
 
 <h2>Proje Listesi</h2>
-
+<br />
 <table class="table table-bordered">
     <tr>
         <th>Proje ID</th>
@@ -17,14 +17,15 @@
     </tr>
     @foreach (var item in Model)
     {
-        <tr>
-            <td>@item.ProjectID</td>
-            <td>@item.Title</td>
-            <td>@item.ProjectCategory</td>
-            <td> <a href="♯" class="btn btn-dark">Github'da Aç'</a></td>
-            <td> <a href="♯" class="btn btn-success">Güncelle</a></td>
-            <td> <a href="♯" class="btn btn-danger">Sil</a></td>
-        </tr>
+<tr>
+    <td>@item.ProjectID</td>
+    <td>@item.Title</td>
+    <td>@item.ProjectCategory</td>
+    <td> <a href="♯" class="btn btn-outline-dark">Github'da Aç'</a></td>
+    <td> <a href="♯" class="btn btn-outline-success">Güncelle</a></td>
+    <td> <a href="♯" class="btn btn-outline-danger">Sil</a></td>
+</tr>
     }
 </table>
+<a href="/Service/AddService" class="btn btn-outline-primary col-12">Yeni Proje Ekle!</a>
 

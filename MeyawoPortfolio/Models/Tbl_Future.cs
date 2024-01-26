@@ -18,5 +18,6 @@ namespace MeyawoPortfolio.Models
         public string Header { get; set; }
         public string NameSurname { get; set; }
         public string Title { get; set; }
+        public string ProjectUrl { get; set; }
     }
 }

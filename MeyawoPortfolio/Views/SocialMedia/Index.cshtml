@@ -1,0 +1,30 @@
+﻿@model List<MeyawoPortfolio.Models.Tbl_SocialMedia>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/_Layout.cshtml";
+}
+
+<h2>Sosyal Medya Hesaplarım</h2>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Başlık</th>
+        <th>Url</th>
+        <th>Icon</th>
+        <th>Güncelle</th>
+        <th>Sil</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.SocialMediaID</td>
+            <td>@item.Title</td>
+            <td>@item.SocialMediaUrl</td>
+            <td>@item.Icon</td>
+            <td> <a href="♯" class="btn btn-outline-success">Güncelle</a></td>
+            <td> <a href="♯" class="btn btn-outline-danger">Sil</a></td>
+        </tr>
+    }
+</table>
+<a href="/Service/AddService" class="btn btn-outline-primary col-12">Sosyal Medya Ekle!</a>
