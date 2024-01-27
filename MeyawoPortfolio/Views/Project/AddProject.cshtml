@@ -1,0 +1,33 @@
+﻿
+@model MeyawoPortfolio.Models.Tbl_Project
+
+@{
+    ViewBag.Title = "AddProject";
+    Layout = "~/Views/AdminLayout/_Layout.cshtml";
+}
+
+<h4>Yeni Proje Ekleme Sayfası</h4>
+<br />
+@using (Html.BeginForm("AddProject", "Project", FormMethod.Post))
+{
+<div class="form-group">
+    @Html.Label("Proje Adı")
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    @Html.Label("Açıklama")
+    @Html.TextAreaFor(x => x.Description, 10, 7, new { @class = "form-control" })
+    <br />
+    @Html.Label("Image Url")
+    @Html.TextAreaFor(x => x.ImageUrl, 10, 7, new { @class = "form-control" })
+    <br />
+    @Html.Label("Project Url")
+    @Html.TextAreaFor(x => x.ProjectUrl, 10, 7, new { @class = "form-control" })
+    <br />
+    @Html.Label("Kategori Adı")
+    @Html.DropDownListFor(x => x.ProjectCategory, (SelectList)ViewBag.categories, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-outline-primary col-md-12">Proje Ekle</button>
+</div>
+}
+
+

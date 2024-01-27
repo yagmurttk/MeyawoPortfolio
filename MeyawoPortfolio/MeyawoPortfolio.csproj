@@ -228,8 +228,11 @@
     <Content Include="NOTLAR.txt" />
     <Content Include="Templates\meyawo-1.0.0\assets\css\meyawo.css" />
     <Content Include="Templates\meyawo-1.0.0\assets\imgs\analytics.svg" />
+    <Content Include="Templates\meyawo-1.0.0\assets\imgs\Anasayfa.png" />
     <Content Include="Templates\meyawo-1.0.0\assets\imgs\avatar2.jpg" />
     <Content Include="Templates\meyawo-1.0.0\assets\imgs\avatar3.jpg" />
+    <Content Include="Templates\meyawo-1.0.0\assets\imgs\CV.jpg" />
+    <Content Include="Templates\meyawo-1.0.0\assets\imgs\Default.png" />
     <Content Include="Templates\meyawo-1.0.0\assets\imgs\folio-1.jpg" />
     <Content Include="Templates\meyawo-1.0.0\assets\imgs\folio-2.jpg" />
     <Content Include="Templates\meyawo-1.0.0\assets\imgs\folio-3.jpg" />
@@ -249,6 +252,7 @@
     <Content Include="Templates\meyawo-1.0.0\assets\imgs\scooter.svg" />
     <Content Include="Templates\meyawo-1.0.0\assets\imgs\shipped.svg" />
     <Content Include="Templates\meyawo-1.0.0\assets\imgs\startup.svg" />
+    <Content Include="Templates\meyawo-1.0.0\assets\imgs\Tatil Seyahat Sitesi.png" />
     <Content Include="Templates\meyawo-1.0.0\assets\imgs\toolbox.svg" />
     <Content Include="Templates\meyawo-1.0.0\assets\js\meyawo.js" />
     <Content Include="Templates\meyawo-1.0.0\assets\vendors\bootstrap\bootstrap.affix.js" />
@@ -280,6 +284,7 @@
     <Content Include="Templates\sidebar-09\js\jquery.min.js" />
     <Content Include="Templates\sidebar-09\js\main.js" />
     <Content Include="Templates\sidebar-09\js\popper.js" />
+    <Content Include="Templates\meyawo-1.0.0\assets\imgs\ürünler.JPG" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -395,7 +400,6 @@
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Views\Project\Index.cshtml" />
     <Content Include="Views\About\Index.cshtml" />
-    <Content Include="Views\Project\CreateProject.cshtml" />
     <Content Include="Views\AdminLayout\_Layout.cshtml" />
     <Content Include="Views\AdminLayout\_HeaderPartial.cshtml" />
     <Content Include="Views\AdminLayout\_SidebarPartial.cshtml" />
@@ -406,8 +410,6 @@
     <Content Include="Views\Category\Index.cshtml" />
     <Content Include="Views\Testimonial\Index.cshtml" />
     <Content Include="Views\SocialMedia\Index.cshtml" />
-    <Content Include="Views\Category\AddCategory.cshtml" />
-    <Content Include="Views\Category\BringCategory.cshtml" />
     <Content Include="Templates\meyawo-1.0.0\assets\scss\abstracts\_mixins.scss" />
     <Content Include="Templates\meyawo-1.0.0\assets\scss\abstracts\_variables.scss" />
     <Content Include="Templates\meyawo-1.0.0\assets\scss\base\_base.scss" />
@@ -530,6 +532,8 @@
     <Content Include="Views\Default\ContactPartial.cshtml" />
     <Content Include="Views\Default\FooterPartial.cshtml" />
     <Content Include="Views\Default\ScriptPartial.cshtml" />
+    <Content Include="Templates\meyawo-1.0.0\Dowloand\EĞİTİMLERİM.xlsx" />
+    <Content Include="Views\Project\AddProject.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

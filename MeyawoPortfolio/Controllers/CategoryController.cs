@@ -23,10 +23,6 @@ namespace MeyawoPortfolio.Controllers
         [HttpPost]
         public ActionResult AddCategory(Tbl_Category ktgr)
         {
-            if (!ModelState.IsValid)
-            {
-                return View("YeniKategori");
-            }
             db.Tbl_Category.Add(ktgr);
             db.SaveChanges();
             return RedirectToAction("Index");
@@ -38,11 +34,13 @@ namespace MeyawoPortfolio.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-        public ActionResult BringCategory(int id)
+        [HttpGet]
+        public ActionResult UpdateProject(int id)
         {
             var ktgr = db.Tbl_Category.Find(id);
-            return View("BringCategory", ktgr);
+            return View(ktgr);
         }
+        [HttpPost]
         public ActionResult UpdateCategory(Tbl_Category p)
         {
             var ktgr = db.Tbl_Category.Find(p.CategoryID);

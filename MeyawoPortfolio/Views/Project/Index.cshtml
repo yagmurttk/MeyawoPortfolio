@@ -4,7 +4,7 @@
     Layout = "~/Views/AdminLayout/_Layout.cshtml";
 }
 
-<h2>Proje Listesi</h2>
+<h4>Proje Listesi</h4>
 <br />
 <table class="table table-bordered">
     <tr>
@@ -17,15 +17,14 @@
     </tr>
     @foreach (var item in Model)
     {
-<tr>
-    <td>@item.ProjectID</td>
-    <td>@item.Title</td>
-    <td>@item.ProjectCategory</td>
-    <td> <a href="♯" class="btn btn-outline-dark">Github'da Aç'</a></td>
-    <td> <a href="♯" class="btn btn-outline-success">Güncelle</a></td>
-    <td> <a href="♯" class="btn btn-outline-danger">Sil</a></td>
-</tr>
+        <tr>
+            <td>@item.ProjectID</td>
+            <td>@item.Title</td>
+            <td>@item.Tbl_Category.CategoryName</td>
+            <td> <a href="@item.ProjectUrl" class="btn btn-outline-dark">Github</a></td>
+            <td> <a href="♯" class="btn btn-outline-success">Güncelle</a></td>
+            <td> <a href="♯" class="btn btn-outline-danger">Sil</a></td>
+        </tr>
     }
 </table>
-<a href="/Service/AddService" class="btn btn-outline-primary col-12">Yeni Proje Ekle!</a>
-
+<a href="/Project/AddProject/" class="btn btn-outline-primary col-12">Yeni Proje Ekle!</a>

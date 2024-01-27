@@ -15,9 +15,19 @@ namespace MeyawoPortfolio.Controllers
             var values = db.Tbl_Project.ToList();
             return View(values);
         }
-        public ActionResult CreateProject()
+        [HttpGet]
+        public ActionResult AddProject()
         {
+            ViewBag.categories = new SelectList(db.Tbl_Category.ToList(), "CategoryID", "CategoryName");
             return View();
+        }
+        [HttpPost]
+        public ActionResult AddProject(Tbl_Project project)
+        {
+            //bu kod kayıt eder.
+            db.Tbl_Project.Add(project);
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }
