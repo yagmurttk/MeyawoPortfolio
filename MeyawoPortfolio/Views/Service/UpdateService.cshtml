@@ -1,0 +1,26 @@
+﻿@model MeyawoPortfolio.Models.Tbl_Service
+
+@{
+    ViewBag.Title = "UpdateService";
+    Layout = "~/Views/AdminLayout/_Layout.cshtml";
+}
+
+<h4>Hizmet Güncelleme Sayfası</h4>
+<br />
+@using (Html.BeginForm("UpdateService", "Service", FormMethod.Post))
+{
+<div class="form-group">
+    @Html.HiddenFor(x => x.ServiceID, new { @class = "form-control" })
+    <br />
+    @Html.Label("Hizmet Adı")
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    @Html.Label("Açıklama")
+    @Html.TextAreaFor(x => x.Description, 10, 7, new { @class = "form-control" })
+    <br />
+    @Html.Label("Image Url")
+    @Html.TextAreaFor(x => x.ImageUrl, 10, 7, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-outline-primary col-md-12">Güncelle</button>
+</div>
+}

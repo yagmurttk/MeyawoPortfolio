@@ -25,6 +25,15 @@
           <Property Name="Description" Type="nvarchar(max)" />
           <Property Name="ImageUrl" Type="nvarchar" MaxLength="250" />
         </EntityType>
+        <EntityType Name="Tbl_AdminSidebar">
+          <Key>
+            <PropertyRef Name="AdminSideBarID" />
+          </Key>
+          <Property Name="AdminSideBarID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SidebarTitle" Type="nvarchar" MaxLength="50" />
+          <Property Name="CoverImageUrl" Type="nvarchar" MaxLength="250" />
+          <Property Name="ProfileImageUrl" Type="nvarchar" MaxLength="250" />
+        </EntityType>
         <EntityType Name="Tbl_Category">
           <Key>
             <PropertyRef Name="CategoryID" />
@@ -108,6 +117,7 @@
         <EntityContainer Name="DbMyPortfolioModelStoreContainer">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tbl_About" EntityType="Self.Tbl_About" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_AdminSidebar" EntityType="Self.Tbl_AdminSidebar" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tbl_Category" EntityType="Self.Tbl_Category" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tbl_Contact" EntityType="Self.Tbl_Contact" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tbl_Future" EntityType="Self.Tbl_Future" Schema="dbo" store:Type="Tables" />
@@ -240,7 +250,17 @@
             <End Role="Tbl_Category" EntitySet="Tbl_Category" />
             <End Role="Tbl_Project" EntitySet="Tbl_Project" />
           </AssociationSet>
+          <EntitySet Name="Tbl_AdminSidebar" EntityType="DbMyPortfolioModel.Tbl_AdminSidebar" />
         </EntityContainer>
+        <EntityType Name="Tbl_AdminSidebar">
+          <Key>
+            <PropertyRef Name="AdminSideBarID" />
+          </Key>
+          <Property Name="AdminSideBarID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SidebarTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CoverImageUrl" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="ProfileImageUrl" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -341,6 +361,16 @@
                 <ScalarProperty Name="NameSurname" ColumnName="NameSurname" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
                 <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_AdminSidebar">
+            <EntityTypeMapping TypeName="DbMyPortfolioModel.Tbl_AdminSidebar">
+              <MappingFragment StoreEntitySet="Tbl_AdminSidebar">
+                <ScalarProperty Name="ProfileImageUrl" ColumnName="ProfileImageUrl" />
+                <ScalarProperty Name="CoverImageUrl" ColumnName="CoverImageUrl" />
+                <ScalarProperty Name="SidebarTitle" ColumnName="SidebarTitle" />
+                <ScalarProperty Name="AdminSideBarID" ColumnName="AdminSideBarID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -1,0 +1,27 @@
+﻿@model MeyawoPortfolio.Models.Tbl_About
+
+@{
+    ViewBag.Title = "AddAbout";
+    Layout = "~/Views/AdminLayout/_Layout.cshtml";
+}
+
+<h4>Hakkımda Ekleme Sayfası</h4>
+<br />
+@using (Html.BeginForm("AddAbout", "About", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.Label("Ben Kimim?")
+        @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+        <br />
+        @Html.Label("Hakkımda")
+        @Html.TextAreaFor(x => x.Header, 10, 7, new { @class = "form-control" })
+        <br />
+        @Html.Label("Açıklama")
+        @Html.TextAreaFor(x => x.Description, 10, 7, new { @class = "form-control" })
+        <br />
+        @Html.Label("Görsel")
+        @Html.TextAreaFor(x => x.ImageUrl, 10, 7, new { @class = "form-control" })
+        <br />
+        <button class="btn btn-outline-primary col-md-12">Hakkımda Ekle</button>
+    </div>
+}

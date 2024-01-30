@@ -1,9 +1,33 @@
-﻿@model List<MeyawoPortfolio.Models.Tbl_Category>
+﻿@model List<MeyawoPortfolio.Models.Tbl_About>
 
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/AdminLayout/_Layout.cshtml";
 }
 
-<h1>Yeni Kategori Ekleme Sayfası</h1>
+<h4>Hakkımda Listesi</h4>
 <br />
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Başlık</th>
+        <th>Hakkımda</th>
+        <th>Açıklama</th>
+        <th>Görsel</th>
+        <th>Güncelle</th>
+        <th>Sil</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.AboutID</td>
+            <td>@item.Title</td>
+            <td>@item.Header</td>
+            <td>@item.Description</td>
+            <td>@item.ImageUrl</td>
+            <td> <a href="/About/UpdateAbout/@item.AboutID" class="btn btn-outline-success">Güncelle</a></td>
+            <td> <a href="/About/DeleteAbout/@item.AboutID" class="btn btn-outline-danger">Sil</a></td>
+        </tr>
+    }
+</table>
+<a href="/About/AddAbout/" class="btn btn-outline-primary col-12">Ekle!</a>

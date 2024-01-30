@@ -1,4 +1,5 @@
 ﻿@model List<MeyawoPortfolio.Models.Tbl_Project>
+
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/AdminLayout/_Layout.cshtml";
@@ -22,8 +23,8 @@
             <td>@item.Title</td>
             <td>@item.Tbl_Category.CategoryName</td>
             <td> <a href="@item.ProjectUrl" class="btn btn-outline-dark">Github</a></td>
-            <td> <a href="♯" class="btn btn-outline-success">Güncelle</a></td>
-            <td> <a href="♯" class="btn btn-outline-danger">Sil</a></td>
+            <td> <a href="/Project/UpdateProject/@item.ProjectID" class="btn btn-outline-success">Güncelle</a></td>
+            <td> <a href="/Project/DeleteProject/@item.ProjectID" class="btn btn-outline-danger">Sil</a></td>
         </tr>
     }
 </table>

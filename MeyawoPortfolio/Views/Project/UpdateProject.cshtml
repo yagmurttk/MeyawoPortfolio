@@ -1,14 +1,13 @@
-﻿
-@model MeyawoPortfolio.Models.Tbl_Project
+﻿@model MeyawoPortfolio.Models.Tbl_Project
 
 @{
-    ViewBag.Title = "AddProject";
+    ViewBag.Title = "UpdateProject";
     Layout = "~/Views/AdminLayout/_Layout.cshtml";
 }
 
-<h4>Proje Ekleme Sayfası</h4>
+<h4>Yeni Proje Güncelleme Sayfası</h4>
 <br />
-@using (Html.BeginForm("AddProject", "Project", FormMethod.Post))
+@using (Html.BeginForm("UpdateProject", "Project", FormMethod.Post))
 {
 <div class="form-group">
     @Html.HiddenFor(x => x.ProjectID, new { @class = "table table-bordered" })
@@ -28,8 +27,6 @@
     @Html.Label("Açıklama")
     @Html.TextAreaFor(x => x.Description, 5, 7, new { @class = "table table-bordered" })
     <br />
-    <button class="btn btn-outline-primary col-md-12">Proje Ekle</button>
+    <button type="submit" class="btn btn-outline-primary col-md-12">Güncelle</button>
 </div>
 }
-
-

@@ -11,7 +11,6 @@
     <tr>
         <th>ID</th>
         <th>Başlık</th>
-        <th>Açıklama</th>
         <th>Görsel</th>
         <th>Güncelle</th>
         <th>Sil</th>
@@ -21,10 +20,9 @@
         <tr>
             <td>@item.ServiceID</td>
             <td>@item.Title</td>
-            <td>@item.Description</td>
             <td>@item.ImageUrl</td>
-            <td> <a href="♯" class="btn btn-outline-success">Güncelle</a></td>
-            <td> <a href="♯" class="btn btn-outline-danger">Sil</a></td>
+            <td> <a href="/Service/UpdateService/@item.ServiceID" class="btn btn-outline-success">Güncelle</a></td>
+            <td> <a href="/Service/DeleteService/@item.ServiceID" class="btn btn-outline-danger">Sil</a></td>
         </tr>
     }
 </table>

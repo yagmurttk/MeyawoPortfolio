@@ -163,6 +163,9 @@
     <Compile Include="Models\Tbl_About.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Tbl_AdminSidebar.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Tbl_Category.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -250,10 +253,16 @@
     <Content Include="Templates\meyawo-1.0.0\assets\imgs\Resim3.png" />
     <Content Include="Templates\meyawo-1.0.0\assets\imgs\responsive.svg" />
     <Content Include="Templates\meyawo-1.0.0\assets\imgs\scooter.svg" />
+    <Content Include="Templates\meyawo-1.0.0\assets\imgs\SEO DANIŞMANLIK.svg" />
+    <Content Include="Templates\meyawo-1.0.0\assets\imgs\seo.svg" />
+    <Content Include="Templates\meyawo-1.0.0\assets\imgs\Servis Geliştirme.svg" />
+    <Content Include="Templates\meyawo-1.0.0\assets\imgs\SERVİS GELİŞTİRME.svg" />
     <Content Include="Templates\meyawo-1.0.0\assets\imgs\shipped.svg" />
     <Content Include="Templates\meyawo-1.0.0\assets\imgs\startup.svg" />
     <Content Include="Templates\meyawo-1.0.0\assets\imgs\Tatil Seyahat Sitesi.png" />
     <Content Include="Templates\meyawo-1.0.0\assets\imgs\toolbox.svg" />
+    <Content Include="Templates\meyawo-1.0.0\assets\imgs\VERİTABANI GELİŞTİRME.svg" />
+    <Content Include="Templates\meyawo-1.0.0\assets\imgs\WEB GELİŞTİRME.svg" />
     <Content Include="Templates\meyawo-1.0.0\assets\js\meyawo.js" />
     <Content Include="Templates\meyawo-1.0.0\assets\vendors\bootstrap\bootstrap.affix.js" />
     <Content Include="Templates\meyawo-1.0.0\assets\vendors\bootstrap\bootstrap.bundle.js" />
@@ -534,6 +543,11 @@
     <Content Include="Views\Default\ScriptPartial.cshtml" />
     <Content Include="Templates\meyawo-1.0.0\Dowloand\EĞİTİMLERİM.xlsx" />
     <Content Include="Views\Project\AddProject.cshtml" />
+    <Content Include="Views\Project\UpdateProject.cshtml" />
+    <Content Include="Views\About\AddAbout.cshtml" />
+    <Content Include="Views\About\UpdateAbout.cshtml" />
+    <Content Include="Views\Service\AddService.cshtml" />
+    <Content Include="Views\Service\UpdateService.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

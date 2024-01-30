@@ -35,7 +35,7 @@ namespace MeyawoPortfolio.Controllers
             return RedirectToAction("Index");
         }
         [HttpGet]
-        public ActionResult UpdateProject(int id)
+        public ActionResult UpdateCategory(int id)
         {
             var ktgr = db.Tbl_Category.Find(id);
             return View(ktgr);

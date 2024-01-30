@@ -34,5 +34,6 @@ namespace MeyawoPortfolio.Models
         public virtual DbSet<Tbl_Service> Tbl_Service { get; set; }
         public virtual DbSet<Tbl_SocialMedia> Tbl_SocialMedia { get; set; }
         public virtual DbSet<Tbl_Testimonial> Tbl_Testimonial { get; set; }
+        public virtual DbSet<Tbl_AdminSidebar> Tbl_AdminSidebar { get; set; }
     }
 }

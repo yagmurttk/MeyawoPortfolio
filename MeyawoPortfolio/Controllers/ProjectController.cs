@@ -24,8 +24,33 @@ namespace MeyawoPortfolio.Controllers
         [HttpPost]
         public ActionResult AddProject(Tbl_Project project)
         {
-            //bu kod kayıt eder.
             db.Tbl_Project.Add(project);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        public ActionResult DeleteProject(int id)
+        {
+            var project = db.Tbl_Project.Find(id);
+            db.Tbl_Project.Remove(project);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        [HttpGet]
+        public ActionResult UpdateProject(int id)
+        {
+            ViewBag.categories = new SelectList(db.Tbl_Category.ToList(), "CategoryID", "CategoryName");
+            var project = db.Tbl_Project.Find(id);
+            return View(project);
+        }
+        [HttpPost]
+        public ActionResult UpdateProject(Tbl_Project p)
+        {
+            var project = db.Tbl_Project.Find(p.ProjectID);
+            project.Title = p.Title;
+            project.Description = p.Description;
+            project.ImageUrl = p.ImageUrl;
+            project.ProjectUrl = p.ProjectUrl;
+            project.ProjectCategory = p.ProjectCategory;
             db.SaveChanges();
             return RedirectToAction("Index");
         }
