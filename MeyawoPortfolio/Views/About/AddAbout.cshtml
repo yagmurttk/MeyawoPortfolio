@@ -11,16 +11,16 @@
 {
     <div class="form-group">
         @Html.Label("Ben Kimim?")
-        @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+        @Html.TextBoxFor(x => x.Title, new { @class = "table table-bordered" })
         <br />
         @Html.Label("Hakkımda")
-        @Html.TextAreaFor(x => x.Header, 10, 7, new { @class = "form-control" })
+        @Html.TextBoxFor(x => x.Header,new { @class = "table table-bordered" })
         <br />
         @Html.Label("Açıklama")
-        @Html.TextAreaFor(x => x.Description, 10, 7, new { @class = "form-control" })
+        @Html.TextAreaFor(x => x.Description,10, 7, new { @class = "table table-bordered" })
         <br />
         @Html.Label("Görsel")
-        @Html.TextAreaFor(x => x.ImageUrl, 10, 7, new { @class = "form-control" })
+        @Html.TextBoxFor(x => x.ImageUrl, new { @class = "table table-bordered" })
         <br />
         <button class="btn btn-outline-primary col-md-12">Hakkımda Ekle</button>
     </div>

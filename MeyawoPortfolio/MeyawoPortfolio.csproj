@@ -243,6 +243,7 @@
     <Content Include="Templates\meyawo-1.0.0\assets\imgs\img-1.jpg" />
     <Content Include="Templates\meyawo-1.0.0\assets\imgs\img-2.jpg" />
     <Content Include="Templates\meyawo-1.0.0\assets\imgs\man.png" />
+    <Content Include="Templates\meyawo-1.0.0\assets\imgs\Meyawo Portfolio.png" />
     <Content Include="Templates\meyawo-1.0.0\assets\imgs\murat.png" />
     <Content Include="Templates\meyawo-1.0.0\assets\imgs\münire.png" />
     <Content Include="Templates\meyawo-1.0.0\assets\imgs\Nesibe.jpeg" />
@@ -548,6 +549,10 @@
     <Content Include="Views\About\UpdateAbout.cshtml" />
     <Content Include="Views\Service\AddService.cshtml" />
     <Content Include="Views\Service\UpdateService.cshtml" />
+    <Content Include="Views\Category\AddCategory.cshtml" />
+    <Content Include="Views\Category\UpdateCategory.cshtml" />
+    <Content Include="Views\Future\AddFuture.cshtml" />
+    <Content Include="Views\Future\UpdateFuture.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,27 @@
+﻿@model MeyawoPortfolio.Models.Tbl_Future
+
+@{
+    ViewBag.Title = "AddFuture";
+    Layout = "~/Views/AdminLayout/_Layout.cshtml";
+}
+
+<h4>Öne Çıkan Ekleme Sayfası</h4>
+<br />
+@using (Html.BeginForm("AddFuture", "Future", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.Label("Başlık")
+        @Html.TextBoxFor(x => x.Header, new { @class = "table table-bordered" })
+        <br />
+        @Html.Label("Adı Soyadı")
+        @Html.TextBoxFor(x => x.NameSurname, new { @class = "table table-bordered" })
+        <br />
+        @Html.Label("Ünvan")
+        @Html.TextBoxFor(x => x.Title, new { @class = "table table-bordered" })
+        <br />
+        @Html.Label("Görsel")
+        @Html.TextBoxFor(x => x.ProjectUrl, new { @class = "table table-bordered" })
+        <br />
+        <button class="btn btn-outline-primary col-md-12">Öne Çıkan Ekle</button>
+    </div>
+}

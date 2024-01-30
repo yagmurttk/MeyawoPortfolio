@@ -23,7 +23,6 @@ namespace MeyawoPortfolio.Controllers
         [HttpPost]
         public ActionResult AddAbout(Tbl_About about)
         {
-            //bu kod kayıt eder.
             db.Tbl_About.Add(about);
             db.SaveChanges();
             return RedirectToAction("Index");

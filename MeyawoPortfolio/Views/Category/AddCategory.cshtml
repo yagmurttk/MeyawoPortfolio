@@ -1,0 +1,20 @@
+﻿@model MeyawoPortfolio.Models.Tbl_Category
+
+@{
+    ViewBag.Title = "AddCategory";
+    Layout = "~/Views/AdminLayout/_Layout.cshtml";
+}
+
+<h4>Kategori Ekleme Sayfası</h4>
+<br />
+@using (Html.BeginForm("AddCategory", "Category", FormMethod.Post))
+{
+<div class="form-group">
+    @Html.HiddenFor(x => x.CategoryID, new { @class = "table table-bordered" })
+    <br />
+    @Html.Label("Kategori Adı")
+    @Html.TextBoxFor(x => x.CategoryName, new { @class = "table table-bordered" })
+
+    <button class="btn btn-outline-primary col-md-12">Kategori Ekle</button>
+</div>
+}
