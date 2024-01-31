@@ -553,6 +553,8 @@
     <Content Include="Views\Category\UpdateCategory.cshtml" />
     <Content Include="Views\Future\AddFuture.cshtml" />
     <Content Include="Views\Future\UpdateFuture.cshtml" />
+    <Content Include="Views\Testimonial\AddTestimonial.cshtml" />
+    <Content Include="Views\Testimonial\UpdateTestimonial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
