@@ -15,9 +15,9 @@ namespace MeyawoPortfolio.Controllers
         // GET: Dashboard
         public ActionResult Index()
         {
-            ViewBag.categoryCount = db.TblCategory.Count();
-            ViewBag.projectCount = db.TblProject.Count();
-            ViewBag.messageCount = db.TblContact.Count();
+            ViewBag.categoryCount = db.Tbl_Category.Count();
+            ViewBag.projectCount = db.Tbl_Project.Count();
+            ViewBag.messageCount = db.Tbl_Contact.Count();
            
 
 
