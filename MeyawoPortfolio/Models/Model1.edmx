@@ -114,6 +114,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="LastAspCoreProject" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="LastAspCoreProject5" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="LastProjectName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="DbMyPortfolioModelStoreContainer">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tbl_About" EntityType="Self.Tbl_About" Schema="dbo" store:Type="Tables" />
@@ -251,6 +254,9 @@
             <End Role="Tbl_Project" EntitySet="Tbl_Project" />
           </AssociationSet>
           <EntitySet Name="Tbl_AdminSidebar" EntityType="DbMyPortfolioModel.Tbl_AdminSidebar" />
+          <FunctionImport Name="LastProjectName" ReturnType="Collection(String)" />
+          <FunctionImport Name="LastAspCoreProject" ReturnType="Collection(DbMyPortfolioModel.LastAspCoreProject_Result)" />
+          <FunctionImport Name="LastAspCoreProject5" ReturnType="Collection(String)" />
         </EntityContainer>
         <EntityType Name="Tbl_AdminSidebar">
           <Key>
@@ -261,6 +267,11 @@
           <Property Name="CoverImageUrl" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="ProfileImageUrl" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
         </EntityType>
+        <ComplexType Name="LastAspCoreProject_Result">
+          <Property Type="String" Name="CategoryName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Title" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Description" Nullable="true" MaxLength="200" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -374,6 +385,17 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="LastProjectName" FunctionName="DbMyPortfolioModel.Store.LastProjectName" />
+          <FunctionImportMapping FunctionImportName="LastAspCoreProject" FunctionName="DbMyPortfolioModel.Store.LastAspCoreProject">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DbMyPortfolioModel.LastAspCoreProject_Result">
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="LastAspCoreProject5" FunctionName="DbMyPortfolioModel.Store.LastAspCoreProject5" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

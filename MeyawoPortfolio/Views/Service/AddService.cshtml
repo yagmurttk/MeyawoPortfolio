@@ -10,21 +10,21 @@
 <br />
 @using (Html.BeginForm("AddService", "Service", FormMethod.Post))
 {
-    <div class="form-group">
-        @Html.Label("Hizmet ID")
-        @Html.TextBoxFor(x => x.ServiceID, new { @class = "table table-bordered" })
-        <br />
-        @Html.Label("Hizmet Adı")
-        @Html.TextBoxFor(x => x.Title,new { @class = "table table-bordered" })
-        <br />
-        @Html.Label("Açıklama")
-        @Html.TextAreaFor(x => x.Description, 10, 7, new { @class = "table table-bordered" })
-        <br />
-        @Html.Label("Image Url")
-        @Html.TextAreaFor(x => x.ImageUrl, 10, 7, new { @class = "table table-bordered" })
-        <br />
-        <button class="btn btn-outline-primary col-md-12">Hizmet Ekle</button>
-    </div>
+<div class="form-group">
+    @Html.Label("Hizmet ID")
+    @Html.TextBoxFor(x => x.ServiceID, new { @class = "table table-bordered" })
+    <br />
+    @Html.Label("Hizmet Adı")
+    @Html.TextBoxFor(x => x.Title, new { @class = "table table-bordered" })
+    <br />
+    @Html.Label("Image Url")
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "table table-bordered" })
+    <br />
+    @Html.Label("Açıklama")
+    @Html.TextAreaFor(x => x.Description, 10, 7, new { @class = "table table-bordered" })
+    <br />
+    <button class="btn btn-outline-primary col-md-12">Hizmet Ekle</button>
+</div>
 }
 
 

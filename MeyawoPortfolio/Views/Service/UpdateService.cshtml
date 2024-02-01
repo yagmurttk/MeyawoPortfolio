@@ -15,11 +15,11 @@
     @Html.Label("Hizmet Adı")
     @Html.TextBoxFor(x => x.Title, new { @class = "table table-bordered" })
     <br />
+    @Html.Label("Image Url")
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "table table-bordered" })
+    <br />
     @Html.Label("Açıklama")
     @Html.TextAreaFor(x => x.Description, 10, 7, new { @class = "table table-bordered" })
-    <br />
-    @Html.Label("Image Url")
-    @Html.TextAreaFor(x => x.ImageUrl, 10, 7, new { @class = "table table-bordered" })
     <br />
     <button class="btn btn-outline-primary col-md-12">Güncelle</button>
 </div>
