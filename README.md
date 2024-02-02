@@ -46,3 +46,6 @@ Admin paneli üzerinden site verileri hakkında detaylı istatistikler Dashboard
 ![Default About](https://github.com/yagmurttk/MeyawoPortfolio_MYAkademi/assets/126063227/ba52ea93-2443-4b3c-89a9-055e39df1aa6)
 ## UI Referanslarım Sayfası
 ![Default Testimonial](https://github.com/yagmurttk/MeyawoPortfolio_MYAkademi/assets/126063227/d1a0d265-5873-4004-88fa-3de9a527f443)
+## Database Yapısı
+![Database](https://github.com/yagmurttk/MeyawoPortfolio_MYAkademi/assets/126063227/2f75e938-b624-4363-91de-ae9704db1e9a)
+
